@@ -2,30 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public struct GridPos { public int row, col; }
 
-public enum Izbor { SKRAT, SKRATZENSKO, ZIR }
+public enum Choice { SKRAT, SKRATZENA, ZIR }
 
 public class Board
 {
-    Izbor[][] izbori;
+    Choice[][] choices;
     List<GridPos> indexList;
 
     public Board()
     {
-        izbori = new Izbor[5][];
+        choices = new Choice[5][];
         indexList = new List<GridPos>();
         for (int i = 0; i < 5; i++)
         {
-            izbori[i] = new Izbor[5];
-            for (int j = 0; j < izbori[i].Length; j++)
+            choices[i] = new Choice[5];
+            for (int j = 0; j < choices[i].Length; j++)
             {
-                izbori[i][j] = Izbor.SKRAT;
+                choices[i][j] = Choice.SKRAT;
                 indexList.Add(new GridPos { row = i, col = j });
             }
         }
 
-        AAddSkratiZir();
+        AddSkratandZir();
     }
 
     GridPos GetRandomFromList()
@@ -37,24 +38,23 @@ public class Board
         return temp;
     }
 
-    void AAddSkratiZir()
+    void AddSkratandZir()
     {
         GridPos temp;
-        for (int i = 0; i < 2; i++)
-        {
-            temp = GetRandomFromList();
-            izbori[temp.row][temp.col] = Izbor.ZIR;
-        }
-        for (int i = 0; i < 3; i++)
-        {
-            temp = GetRandomFromList();
-            izbori[temp.row][temp.col] = Izbor.SKRATZENSKO;
-        }
+        temp = GetRandomFromList();
+        choices[temp.row][temp.col] = Choice.ZIR;
+        temp = GetRandomFromList();
+        choices[temp.row][temp.col] = Choice.ZIR;
+        temp = GetRandomFromList();
+        choices[temp.row][temp.col] = Choice.SKRAT;
+        temp = GetRandomFromList();
+        choices[temp.row][temp.col] = Choice.SKRAT;
+        temp = GetRandomFromList();
+        choices[temp.row][temp.col] = Choice.SKRAT;
     }
 
-    public Izbor GetChoice(int row, int col)
+    public Choice GetChoice(int row, int col)
     {
-        return izbori[row][col];
+        return choices[row][col];
     }
 }
-
