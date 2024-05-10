@@ -65,4 +65,9 @@ public class Board
 
     }
 
+    void funkcija2()
+    {
+
+    }
+
 }
