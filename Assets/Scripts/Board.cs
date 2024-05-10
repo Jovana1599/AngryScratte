@@ -57,4 +57,12 @@ public class Board
     {
         return choices[row][col];
     }
+
+    // promena
+
+    void funkcija()
+    {
+
+    }
+
 }
