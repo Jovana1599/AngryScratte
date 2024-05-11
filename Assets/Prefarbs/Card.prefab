@@ -143,3 +143,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8072b52a86c173f4ea18010b23a06910, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasClicked: 0
+  row: 0
+  col: 0
+  zir: {fileID: 21300000, guid: cce8d6cb73442864dabb9b5dacb3d826, type: 3}
+  skrat: {fileID: 21300000, guid: ce46d00a7be137c4c943f10b9b2b7c84, type: 3}
+  skratzena: {fileID: 21300000, guid: 20ac7668b4592d04b973672eaafa3a3d, type: 3}
+  unrevealed: {fileID: 21300000, guid: d8dbfb3e3991f3a4d8593ef5e222d007, type: 3}
+  mychoice: 0

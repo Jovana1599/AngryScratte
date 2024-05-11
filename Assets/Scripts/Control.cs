@@ -44,7 +44,15 @@ public class Control : MonoBehaviour
             Destroy(gameObject);
         }
 
-        message.text = "Play the next turn";
+        if (message != null)
+        {
+            message.text = "Play the Next Turn";
+        }
+        else
+        {
+            Debug.LogError("Referenca na objekt 'message' je postavljena na null.");
+        }
+
         hasGameFinished = false;
 
         myboard = new Board();
