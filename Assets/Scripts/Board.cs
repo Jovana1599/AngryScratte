@@ -5,7 +5,7 @@ using UnityEngine;
 
 public struct GridPos { public int row, col; }
 
-public enum Choice { SKRAT, SKRATZENA, ZIR }
+public enum Choice { SKRAT, ZIR, SKRATZENA }
 
 public class Board
 {
@@ -26,7 +26,7 @@ public class Board
             }
         }
 
-        AddSkratandZir();
+        AddSkratZenaAndZir();
     }
 
     GridPos GetRandomFromList()
@@ -38,7 +38,7 @@ public class Board
         return temp;
     }
 
-    void AddSkratandZir()
+    void AddSkratZenaAndZir()
     {
         GridPos temp;
         temp = GetRandomFromList();
@@ -46,28 +46,12 @@ public class Board
         temp = GetRandomFromList();
         choices[temp.row][temp.col] = Choice.ZIR;
         temp = GetRandomFromList();
-        choices[temp.row][temp.col] = Choice.SKRAT;
+        choices[temp.row][temp.col] = Choice.SKRATZENA;
         temp = GetRandomFromList();
-        choices[temp.row][temp.col] = Choice.SKRAT;
+        choices[temp.row][temp.col] = Choice.SKRATZENA;
         temp = GetRandomFromList();
-        choices[temp.row][temp.col] = Choice.SKRAT;
+        choices[temp.row][temp.col] = Choice.SKRATZENA;
     }
 
-    public Choice GetChoice(int row, int col)
-    {
-        return choices[row][col];
-    }
-
-    // promena
-
-    void funkcija()
-    {
-
-    }
-
-    void funkcija2()
-    {
-
-    }
 
 }

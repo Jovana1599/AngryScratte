@@ -1,21 +1,6 @@
-Couldn't connect IPC stream
+Base path: 'C:/Program Files/Unity/Hub/Editor/2022.3.26f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2022.3.26f1/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+
+Unhandled exception: Protocol error - failed to read magic number. Error code 0x80000004 (Not connected). (transferred 0/4)
 
 Quitting shader compiler process
-3221225477
-Crashed!
-=======================================
-RtlLookupFunctionEntry returned NULL function. Aborting stack walk.
-0x00007ff75824aacd (UnityShaderCompiler) 
-0x00007ff75824e7b2 (UnityShaderCompiler) 
-0x00007ff758232b08 (UnityShaderCompiler) 
-0x00007ff758227c8a (UnityShaderCompiler) 
-0x00007ffbd172ca6c (KERNELBASE) UnhandledExceptionFilter
-0x00007ffbd3cf8a7d (ntdll) memcpy
-0x00007ffbd3cdf187 (ntdll) _C_specific_handler
-0x00007ffbd3cf440f (ntdll) _chkstk
-0x00007ffbd3c6e466 (ntdll) RtlFindCharInUnicodeString
-0x00007ffbd3cf33fe (ntdll) KiUserExceptionDispatcher
-0x00007ff758234470 (UnityShaderCompiler) 
-<Missing stacktrace information>
-
-=======================================
