@@ -4,15 +4,37 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public bool hasClicked;
+
+    [SerializeField]
+    int row, col;
+
+    [SerializeField]
+    Sprite zir, skrat, skratzena, unrevealed;
+
+    SpriteRenderer renderer;
+
+    Animator animator;
+
+    public Choice mychoice;
+
+    private void Start()
     {
-        
+        hasClicked = false;
+        renderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        mychoice = Control.instance.myboard.GetChoice(row, col);
+        renderer.sprite = unrevealed;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayTurn()
     {
-        
+        Sprite current = mychoice == Choice.SKRAT ? skrat
+            : mychoice == Choice.ZIR ? zir
+            : skratzena;
+        renderer.sprite = current;
+        hasClicked = true;
     }
+
 }

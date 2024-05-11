@@ -53,5 +53,8 @@ public class Board
         choices[temp.row][temp.col] = Choice.SKRATZENA;
     }
 
-
+    public Choice GetChoice(int row, int col)
+    {
+        return choices[row][col];
+    }
 }
