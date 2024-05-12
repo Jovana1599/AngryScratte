@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1085799426541869543}
   - component: {fileID: 633029106866917066}
   - component: {fileID: 5157768511384718554}
+  - component: {fileID: -881165160943724661}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -151,3 +152,24 @@ MonoBehaviour:
   skratzena: {fileID: 21300000, guid: 20ac7668b4592d04b973672eaafa3a3d, type: 3}
   unrevealed: {fileID: 21300000, guid: d8dbfb3e3991f3a4d8593ef5e222d007, type: 3}
   mychoice: 0
+--- !u!95 &-881165160943724661
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4845867314106839821}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 831dd09128e339145964cc1f55dc3c7e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

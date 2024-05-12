@@ -30,11 +30,17 @@ public class Card : MonoBehaviour
 
     public void PlayTurn()
     {
+        animator.Play("Reveal");
+        hasClicked = true;
+    }
+
+    public void ChangeImage()
+    {
         Sprite current = mychoice == Choice.SKRAT ? skrat
             : mychoice == Choice.ZIR ? zir
             : skratzena;
         renderer.sprite = current;
-        hasClicked = true;
+
     }
 
 }
